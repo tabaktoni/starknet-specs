@@ -17,7 +17,7 @@
                     "summary": "The hash of the transaction to trace",
                     "required": true,
                     "schema": {
-                        "$ref": "./starknet_api_openrpc.json#/components/schemas/TXN_HASH"
+                        "$ref": "#/components/schemas/TXN_HASH"
                     }
                 }
             ],
@@ -295,7 +295,7 @@
                 "description": "Flags that indicate how to simulate a given transaction. By default, the sequencer behavior is replicated locally (enough funds are expected to be in the account, and fee will be deducted from the balance before the simulation of the next transaction). To skip the fee charge, use the SKIP_FEE_CHARGE flag."
             },
             "NESTED_CALL": {
-                "$ref": "#/components/schemas/FUNCTION_INVOCATION"
+                "$ref": "#/components/schemas/FELT"
             },
             "FUNCTION_INVOCATION": {
                 "allOf": [
@@ -430,31 +430,31 @@
                 ]
             },
             "FELT": {
-                "$ref": "./starknet_api_openrpc.json#/components/schemas/FELT"
+                "$ref": "#/components/schemas/FELT"
             },
             "FUNCTION_CALL": {
-                "$ref": "./starknet_api_openrpc.json#/components/schemas/FUNCTION_CALL"
+                "$ref": "#/components/schemas/FUNCTION_CALL"
             },
             "EVENT": {
-                "$ref": "./starknet_api_openrpc.json#/components/schemas/EVENT_CONTENT"
+                "$ref": "#/components/schemas/EVENT_CONTENT"
             },
             "MSG_TO_L1": {
-                "$ref": "./starknet_api_openrpc.json#/components/schemas/MSG_TO_L1"
+                "$ref": "#/components/schemas/MSG_TO_L1"
             },
             "BLOCK_ID": {
-                "$ref": "./starknet_api_openrpc.json#/components/schemas/BLOCK_ID"
+                "$ref": "#/components/schemas/BLOCK_ID"
             },
             "FEE_ESTIMATE": {
-                "$ref": "./starknet_api_openrpc.json#/components/schemas/FEE_ESTIMATE"
+                "$ref": "#/components/schemas/FEE_ESTIMATE"
             },
             "BROADCASTED_TXN": {
-                "$ref": "./api/starknet_api_openrpc.json#/components/schemas/BROADCASTED_TXN"
+                "$ref": "#/components/schemas/BROADCASTED_TXN"
             },
             "STATE_DIFF": {
-                "$ref": "./api/starknet_api_openrpc.json#/components/schemas/STATE_DIFF"
+                "$ref": "#/components/schemas/STATE_DIFF"
             },
             "EXECUTION_RESOURCES": {
-                "$ref": "./api/starknet_api_openrpc.json#/components/schemas/EXECUTION_RESOURCES"
+                "$ref": "#/components/schemas/EXECUTION_RESOURCES"
             }
         },
         "errors": {
@@ -476,13 +476,13 @@
                 }
             },
             "TXN_HASH_NOT_FOUND": {
-                "$ref": "./api/starknet_api_openrpc.json#/components/errors/TXN_HASH_NOT_FOUND"
+                "$ref": "#/components/errors/TXN_HASH_NOT_FOUND"
             },
             "BLOCK_NOT_FOUND": {
-                "$ref": "./api/starknet_api_openrpc.json#/components/errors/BLOCK_NOT_FOUND"
+                "$ref": "#/components/errors/BLOCK_NOT_FOUND"
             },
             "TRANSACTION_EXECUTION_ERROR": {
-                "$ref": "./api/starknet_api_openrpc.json#/components/errors/TRANSACTION_EXECUTION_ERROR"
+                "$ref": "#/components/errors/TRANSACTION_EXECUTION_ERROR"
             }
         }
     }
